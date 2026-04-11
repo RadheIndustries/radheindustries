@@ -5,88 +5,374 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Radhe Industries</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/product.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <h2>Radhe Industries</h2>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html" class="active">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
+    <header class="header">
+        <div class="container header-inner">
+          <a href="index.html" class="logo" style="text-decoration: none;">
+            <h2>Radhe Industries</h2>
+          </a>
+          <nav class="nav">
+            <a href="index.html#home">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html" class="active">Products</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
     </header>
 
     <section class="product-hero">
         <div class="hero-content">
-            <!-- <h1>Contact Us</h1>
-            <p>GET IN TOUCH WITH US</p> -->
+            <h1>Our Products</h1>
+            <div class="breadcrumb"><a href="index.html">Home</a><span> › </span><span>Products</span></div>
         </div>
     </section>
+  
+    <section class="products-section">
+    <div class="container">
+      <h2 class="section-title">Our Product Range</h2>
 
-    <section class="products-page">
-        <div class="container">
-            <h2 class="section-title">Our Product Range</h2>
+      <!-- FILTER TABS -->
+      <div class="filter-tabs" id="filterTabs">
+        <button class="tab active" data-filter="all">View All</button>
+        <button class="tab" data-filter="brass-cable-glands">Brass Cable Glands</button>
+        <button class="tab" data-filter="ampere-pins">Ampere Pins</button>
+        <button class="tab" data-filter="copper-split-bolts">Copper Split Bolts & Lugs</button>
+        <button class="tab" data-filter="diverters">Diverters</button>
+        <button class="tab" data-filter="earth-tag">Earth Tag</button>
+        <button class="tab" data-filter="ball-valves">Ball Valves</button>
+        <button class="tab" data-filter="auto-electrical">Auto Electrical Parts</button>
+        <button class="tab" data-filter="inserts">Inserts</button>
+        <button class="tab" data-filter="quarter-turn">Quarter Turn Ceramic Valves</button>
+        <button class="tab" data-filter="gas-solenoid">Gas Solenoid Valve Parts</button>
+        <button class="tab" data-filter="impellers">Impellers</button>
+        <button class="tab" data-filter="contact-pin">Contact Pin</button>
+        <button class="tab" data-filter="temp-sensor">Temperature Sensor Bolt</button>
+        <button class="tab" data-filter="terminal">Terminal</button>
+        <button class="tab" data-filter="socket">Socket</button>
+        <button class="tab" data-filter="pivot-post">Pivot Post</button>
+        <button class="tab" data-filter="solenoid-valves">Solenoid Valves Parts</button>
+      </div>
 
-            <div class="products-grid">
+      <!-- PRODUCT GRID -->
+      <div class="product-grid" id="productGrid">
 
-                <!-- PRODUCT ITEM -->
-                <a href="productdetail1.html" class="product-card">
-                    <div class="product-image">
-                        <img src="images/product1.jpg" alt="">
-                        <div class="overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <h3>Brass Cable Glands</h3>
-                </a>
-
-                <a href="product-details.html" class="product-card">
-                    <div class="product-image">
-                        <img src="images/product2.jpg" alt="">
-                        <div class="overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <h3>Ampere Pins</h3>
-                </a>
-
-                <a href="product-details.html" class="product-card">
-                    <div class="product-image">
-                        <img src="images/product3.jpg" alt="">
-                        <div class="overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <h3>Ball Valves</h3>
-                </a>
-
-                <a href="product-details.html" class="product-card">
-                    <div class="product-image">
-                        <img src="images/product4.jpg" alt="">
-                        <div class="overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <h3>Electrical Parts</h3>
-                </a>
-
+        <!-- <a href="product-detail.html?product=brass-cable-glands" class="product-card" data-category="brass-cable-glands"> -->
+          <div class="product-card" data-category="brass-cable-glands">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/brass-cable-glands.jpg" alt="Brass Cable Glands" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Brass Cable Glands</span>
             </div>
-        </div>
-    </section>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Brass Cable Glands</h3>
+          </div> -->
+          </div>
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=ampere-pins" class="product-card" data-category="ampere-pins"> -->
+          <div class="product-card" data-category="ampere-pins">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/ampere-pins.jpg" alt="Ampere Pins" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Ampere Pins</span>
+            </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Ampere Pins</h3>
+          </div> -->
+          </div>
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=copper-split-bolts" class="product-card" data-category="copper-split-bolts"> -->
+          <div class="product-card" data-category="copper-split-bolts">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/copper-split-bolts-and-lugs.jpg" alt="Copper Split Bolts and Lugs" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Copper Split Bolts and Lugs</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Copper Split Bolts and Lugs</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=copper-split-bolts" class="product-card" data-category="copper-split-bolts"> -->
+          <div class="product-card" data-category="copper-split-bolts">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/copper-split-bolts-and-lugs-2.jpg" alt="Copper Split Bolts and Lugs 2" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Copper Split Bolts and Lugs</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Copper Split Bolts and Lugs</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=diverters" class="product-card" data-category="diverters"> -->
+          <div class="product-card" data-category="diverters">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/diverters.jpg" alt="Diverters" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Diverters</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Diverters</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=earth-tag" class="product-card" data-category="earth-tag"> -->
+          <div class="product-card" data-category="earth-tag">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/earth-tag.jpg" alt="Earth Tag" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Earth Tag</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Earth Tag</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=ball-valves" class="product-card" data-category="ball-valves"> -->
+          <div class="product-card" data-category="ball-valves">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/ball-valves.jpg" alt="Ball Valves" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Ball Valves</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Ball Valves</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=auto-electrical" class="product-card" data-category="auto-electrical"> -->
+          <div class="product-card" data-category="auto-electrical">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/auto-electrical-parts.jpg" alt="Auto Electrical Parts" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Auto Electrical Parts</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Auto Electrical Parts</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=auto-electrical" class="product-card" data-category="auto-electrical"> -->
+          <div class="product-card" data-category="auto-electrical">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/auto-electrical-parts-2.jpg" alt="Auto Electrical Parts 2" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Auto Electrical Parts</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Auto Electrical Parts</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=qrc-body" class="product-card" data-category="auto-electrical"> -->
+          <div class="product-card" data-category="auto-electrical">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/qrc-body.jpg" alt="QRC Body" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">QRC Bodys</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">QRC Body</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=en1a-body" class="product-card" data-category="auto-electrical"> -->
+          <div class="product-card" data-category="auto-electrical">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/en1a-body.jpg" alt="EN1A Body" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">EN1A Body</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">EN1A Body</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=inserts" class="product-card" data-category="inserts"> -->
+          <div class="product-card" data-category="inserts">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/inserts.jpg" alt="Inserts" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Inserts</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Inserts</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=quarter-turn" class="product-card" data-category="quarter-turn"> -->
+          <div class="product-card" data-category="quarter-turn">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/quarter-turn-veramic-valves.jpg" alt="Quarter Turn Ceramic Valves" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Quarter Turn Ceramic Valves</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Quarter Turn Ceramic Valves</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=gas-solenoid" class="product-card" data-category="gas-solenoid"> -->
+          <div class="product-card" data-category="gas-solenoid">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/gas-solenoid-valve-parts.jpg" alt="Gas Solenoid Valve Parts" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Gas Solenoid Valve Parts</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Gas Solenoid Valve Parts</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=impellers" class="product-card" data-category="impellers"> -->
+          <div class="product-card" data-category="impellers">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/impellers.jpg" alt="Impellers" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Impellers</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Impellers</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=contact-pin" class="product-card" data-category="contact-pin"> -->
+          <div class="product-card" data-category="contact-pin">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/contact-pin.jpg" alt="Contact Pin" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Contact Pin</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Contact Pin</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=temp-sensor" class="product-card" data-category="temp-sensor"> -->
+          <div class="product-card" data-category="temp-sensor">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/temperature-sensor-bolt.jpg" alt="Temperature Sensor Bolt" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Temperature Sensor Bolt</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Temperature Sensor Bolt</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=terminal" class="product-card" data-category="terminal"> -->
+          <div class="product-card" data-category="terminal">
+            <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/terminal-01.jpg" alt="Terminal" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Terminal</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Terminal</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=socket" class="product-card" data-category="socket"> -->
+          <div class="product-card" data-category="socket">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/socket.jpg" alt="Socket" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Socket</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Socket</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=pivot-post" class="product-card" data-category="pivot-post"> -->
+          <div class="product-card" data-category="pivot-post">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/pivot-post.jpg" alt="Pivot Post" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Pivot Post</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Pivot Post</h3>
+          </div> -->
+        <!-- </a> -->
+
+        <!-- <a href="product-detail.html?product=solenoid-valves" class="product-card" data-category="solenoid-valves"> -->
+          <div class="product-card" data-category="solenoid-valves">
+          <div class="product-img-wrap">
+            <img src="https://www.shubhamindustries.com/images/products/solenoid-valves-parts.jpg" alt="Solenoid Valves Parts" loading="lazy"/>
+            <div class="product-overlay">
+              <span class="view-btn">Solenoid Valves Parts</span>
+            </div>
+          </div>
+          </div>
+          <!-- <div class="product-info">
+            <h3 class="product-name">Solenoid Valves Parts</h3>
+          </div> -->
+        <!-- </a> -->
+
+      </div><!-- /product-grid -->
+    </div>
+  </section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="inner">
+    <h2>Over 30 Years of Experience — We'll Ensure You Get the Best Products.</h2>
+    <a href="contact.html" class="btn-white">Request a Quote</a>
+  </div>
+</div>
+<script src="js/product.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
