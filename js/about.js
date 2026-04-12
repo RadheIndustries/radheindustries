@@ -177,18 +177,6 @@ function navbarScrollEffect() {
     });
 }
 
-// 9. Parallax Effect for Hero
-function parallaxHero() {
-    const hero = document.querySelector('.hero-about');
-    if (hero) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            hero.style.transform = `translateY(${rate}px)`;
-        });
-    }
-}
-
 // ============================================
 // INITIALIZE ALL FUNCTIONS
 // ============================================
