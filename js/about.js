@@ -247,3 +247,28 @@ if (document.readyState === 'loading') {
     lazyLoadImages();
     preloadImages();
 }
+
+const tags = document.querySelectorAll('.cap-tags span');
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImg');
+const closeBtn = document.querySelector('.close-btn');
+
+tags.forEach(tag => {
+    tag.addEventListener('click', () => {
+        const imgSrc = tag.getAttribute('data-img');
+        modalImg.src = imgSrc;
+        modal.classList.add('active');
+    });
+});
+
+// Close button
+closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+});
+
+// Close on outside click
+modal.addEventListener('click', (e) => {
+    if (e.target !== modalImg) {
+        modal.classList.remove('active');
+    }
+});
