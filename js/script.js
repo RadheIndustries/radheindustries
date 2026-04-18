@@ -83,7 +83,7 @@ dots.forEach(dot => {
 });
 
 
-// ================= COUNTER ANIMATION =================
+// COUNTER ANIMATION
 const counters = document.querySelectorAll(".stat-number");
 
 const runCounter = (counter) => {
@@ -115,4 +115,38 @@ window.addEventListener("scroll", () => {
         counters.forEach(counter => runCounter(counter));
         started = true;
     }
+});
+
+// service page --> Market we served
+document.addEventListener('DOMContentLoaded', function () {
+
+  const items = document.querySelectorAll('.market-item');
+
+  items.forEach(function (item) {
+    item.addEventListener('click', function () {
+
+      // The panel is the next sibling <div class="market-image-panel"> after this <li>
+      const panel = item.nextElementSibling;
+      const imageSrc = item.getAttribute('data-image');
+      const isOpen = item.classList.contains('active');
+
+      // Close ALL open items and panels first
+      document.querySelectorAll('.market-item.active').forEach(function (openItem) {
+        openItem.classList.remove('active');
+        const openPanel = openItem.nextElementSibling;
+        if (openPanel && openPanel.classList.contains('market-image-panel')) {
+          openPanel.classList.remove('open');
+          openPanel.innerHTML = '';
+        }
+      });
+
+      // If this item was not already open — open it now
+      if (!isOpen && panel && panel.classList.contains('market-image-panel')) {
+        item.classList.add('active');
+        panel.innerHTML = '<img src="' + imageSrc + '" alt="' + item.querySelector('span').textContent + '" />';
+        panel.classList.add('open');
+      }
+    });
+  });
+
 });
