@@ -1,5 +1,5 @@
 // ============================================
-// ABOUT PAGE JAVASCRIPT - Radhe Industries
+// ABOUT PAGE JAVASCRIPT - Vertex Industries Inc
 // ============================================
 
 // 1. Counter Animation for Stats

@@ -1,7 +1,7 @@
 ## Hi there 👋
 
 <!--
-**RadheIndustries/radheindustries** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Vertex Industries Inc/Vertex Industries Inc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 

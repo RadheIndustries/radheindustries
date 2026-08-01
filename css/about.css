@@ -309,6 +309,15 @@
     color: var(--primary);
 }
 
+.email-list p {
+    margin: 0 0 8px;
+}
+
+.email-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Responsive */
 @media (max-width: 970px) {
     .team-grid {
